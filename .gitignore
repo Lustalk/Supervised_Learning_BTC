@@ -1,0 +1,77 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+Credentials.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files (if you have large ML models)
+*.pkl
+*.joblib
+*.h5
+*.pth
+*.ckpt
+
+# Data files (if you have large datasets)
+*.csv
+*.json
+*.parquet
+*.feather
+data/
+datasets/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
