@@ -16,7 +16,7 @@ class TestCreateLabels:
         """Set up test data before each test method."""
         # Create sample OHLCV data for testing
         np.random.seed(42)
-        dates = pd.date_range('2024-01-01', periods=50, freq='4H')
+        dates = pd.date_range('2024-01-01', periods=50, freq='4h')
         
         # Generate realistic price data
         base_price = 50000

@@ -32,10 +32,12 @@ Comprehensive technical indicators including:
 
 *Optimized for performance with batch operations and zero warnings*
 
-### Step 3: Model Training (⏳ Planned)
-- **LightGBM Classifier**: Primary model for its speed and tabular data performance
+### Step 3: Model Training (✅ Complete)
+- **XGBoost Classifier**: Primary model for its speed and tabular data performance
 - **TimeSeriesSplit**: Forward-walking validation to prevent data leakage
 - **Feature Scaling**: Applied after train-test split to prevent leakage
+- **Class Balancing**: Automatic class weight computation for imbalanced data
+- **Model Persistence**: Save/load trained models with joblib
 
 ### Step 4: Backtesting Engine (⏳ Planned)
 - Portfolio simulation with transaction fees
@@ -64,6 +66,21 @@ validate_labels(targets)
 ```bash
 pytest test_bitcoin_trading_bot.py -v
 pytest test_feature_engineering.py -v
+pytest test_model_training.py -v
+```
+
+### Model Training Example
+```python
+from model_training import train_bitcoin_model
+
+# Train the XGBoost model
+model = train_bitcoin_model(df, target_col='target', n_splits=5)
+
+# View feature importance
+model.plot_feature_importance()
+
+# Save the trained model
+model.save_model('bitcoin_trading_model.pkl')
 ```
 
 ## 📊 Data Requirements
@@ -127,9 +144,10 @@ While the ML model generates signals, a complete trading strategy requires:
 
 ## 📚 Dependencies
 
-- **Core ML**: scikit-learn, LightGBM, XGBoost
+- **Core ML**: scikit-learn, XGBoost
 - **Data Processing**: pandas, numpy
 - **Visualization**: matplotlib, seaborn
+- **Model Persistence**: joblib
 - **Testing**: pytest
 
 ## 🤝 Contributing
