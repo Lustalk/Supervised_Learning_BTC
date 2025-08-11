@@ -23,12 +23,14 @@ Our core innovation lies in the target variable definition:
 
 The 2% threshold covers transaction fees (~0.1%) and generates meaningful profit, while the 24-period horizon balances signal frequency with noise reduction.
 
-### Step 2: Feature Engineering (🔄 In Progress)
+### Step 2: Feature Engineering (✅ Complete)
 Comprehensive technical indicators including:
 - Moving averages (EMA, SMA)
 - Momentum indicators (RSI, MACD)
 - Volatility measures (Bollinger Bands, ATR)
 - Time-based features (day of week, month)
+
+*Optimized for performance with batch operations and zero warnings*
 
 ### Step 3: Model Training (⏳ Planned)
 - **LightGBM Classifier**: Primary model for its speed and tabular data performance
@@ -61,6 +63,7 @@ validate_labels(targets)
 ### Run Tests
 ```bash
 pytest test_bitcoin_trading_bot.py -v
+pytest test_feature_engineering.py -v
 ```
 
 ## 📊 Data Requirements
@@ -127,7 +130,6 @@ While the ML model generates signals, a complete trading strategy requires:
 - **Core ML**: scikit-learn, LightGBM, XGBoost
 - **Data Processing**: pandas, numpy
 - **Visualization**: matplotlib, seaborn
-- **Data Sources**: ccxt, yfinance
 - **Testing**: pytest
 
 ## 🤝 Contributing
@@ -148,4 +150,4 @@ MIT License - see LICENSE file for details.
 
 ---
 
-**Built with ❤️ by a Senior Data Scientist specializing in quantitative finance**
+**Built with ❤️ by a Data Scientist specializing in quantitative finance**
